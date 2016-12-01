@@ -8,4 +8,8 @@ setup(name='smpq',
       author_email='jay@strangemother.com',
       license='MIT',
       py_modules=['smpq'],
+      classifiers=[
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+      ],
       zip_safe=False)

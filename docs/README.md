@@ -8,6 +8,11 @@ Simple Multiprocessing Queue or SMQ is a `Queue` built into a `multiprocess`. Yo
 
 `smq` has no dependencies. Import `smq.ProcessQueue` and give it a function.
 
+Install `smpq` from `pip`
+```py
+$> pip install smpq
+```
+
 ```py
 from smq import ProcessQueue
 import time
