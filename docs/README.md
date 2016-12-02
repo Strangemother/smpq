@@ -4,6 +4,14 @@ Handling information in another process is boring. Using another thread to work 
 
 Simple Multiprocessing Queue or SMQ is a `Queue` built into a `multiprocess`. You fill a queue, `smq` will handle a process.
 
+### Highlights
+
++ Always handle your queue within a process, ignoring the need to handle the process
++ Provide real _non-blocking_ utilies for web frameworks _(tornado, django...)_
++ Well-behaved handling of a `multiprocessing.Process` not a `Thread` type.
++ Extremely lightweight.
++ No framework, no dependencies, no data-wrangling.
+
 ## Getting Started
 
 `smq` has no dependencies. Import `smq.ProcessQueue` and give it a function.
@@ -63,13 +71,6 @@ Every instance of `ProcessQueue` is a new multiprocess thread. You should care f
 
 You don't need to worry about the processing or the queue. Adding items to `start([])` will manage the thread safely.
 
-### Highlights
-
-+ Always handle your queue within a process, ignoring the need to handle the process
-+ Provide real _non-blocking_ utilies for web frameworks _(tornado, django...)_
-+ Well-behaved handling of a `multiprocessing.Process` not a `Thread` type.
-+ Extremely lightweight.
-+ No framework, no dependencies, no data-wrangling.
 
 ### Things To Remember
 
@@ -96,7 +97,7 @@ pq = ProcessQueue(handler)
 pq.start([])
 ```
 
-You may hate the eay life. Here is a verbose example using other methods:
+You may hate the easy life. Here is a verbose example using other methods:
 
 ```py
 from smq import ProcessQueue
