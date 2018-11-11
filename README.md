@@ -2,7 +2,7 @@
 
 Handling information in another process is boring. Using another thread to work your data is fun.
 
-Simple Multiprocessing Queue or SMQ is a `Queue` built into a `multiprocess`. You fill a queue, `smpq` will handle a process.
+Simple Multiprocessing Queue or SMQ is a `Queue` built into a `multiprocess`. You fill a queue, `smpq` will handle a process. It works on Windows, Linux and Rasperry Pi
 
 ## Getting Started
 
@@ -96,7 +96,7 @@ pq = ProcessQueue(handler)
 pq.start([])
 ```
 
-You may hate the eay life. Here is a verbose example using other methods:
+You may hate the easy life. Here is a verbose example using other methods:
 
 ```py
 from smpq import ProcessQueue
